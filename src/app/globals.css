@@ -4,33 +4,38 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: oklch(0.97 0.01 80.72);
-  --foreground: oklch(0.3 0.04 30.2);
+  --background: #FFFFFF;
+  --foreground: #032D60;
 
-  --card: oklch(0.97 0.01 80.72);
-  --card-foreground: oklch(0.3 0.04 30.2);
+  --background-2: #F3F3F3;
+  --foreground-2: #03234D;
 
-  --popover: oklch(0.97 0.01 80.72);
+  --card: #FFFFFF;
+  --card-foreground: #032D60;
+
+  --popover: #ffffff;
   --popover-foreground: oklch(0.3 0.04 30.2);
 
-  --primary: oklch(0.52 0.13 144.17);
+  --primary: oklch(0.5707 0.2346 260.44);
   --primary-foreground: oklch(1.0 0 0);
 
-  --secondary: oklch(0.96 0.02 147.64);
+  --secondary: #f3f3f3;
   --secondary-foreground: oklch(0.43 0.12 144.31);
 
   --muted: oklch(0.94 0.01 74.42);
   --muted-foreground: oklch(0.45 0.05 39.21);
 
-  --accent: oklch(0.9 0.05 146.04);
-  --accent-foreground: oklch(0.43 0.12 144.31);
+  --accent: #066AFE;
+  --accent-foreground: #FFFFFF;
+  --accent-dark : #001e5b;
+  --accent-dark2: #032d60;
 
   --destructive: oklch(0.54 0.19 26.72);
   --destructive-foreground: oklch(1.0 0 0);
 
-  --border: oklch(0.88 0.02 74.64);
-  --input: oklch(0.88 0.02 74.64);
-  --ring: oklch(0.52 0.13 144.17);
+  --border: #c9c9c9;
+  --input: #5c5c5c;
+  --ring: #066AFE;
 
   --chart-1: oklch(0.67 0.16 144.21);
   --chart-2: oklch(0.58 0.14 144.18);
@@ -47,7 +52,16 @@
   --sidebar-border: oklch(0.88 0.02 74.64);
   --sidebar-ring: oklch(0.52 0.13 144.17);
 
-  --radius: 0.5rem;
+  --radius: 0.75rem;
+  --radius-2: 1.5rem;
+
+  --button-light-bg-hover:#f3f3f3;
+  --button-light-brand-bg-hover:#022ac0;
+  
+  --font-system: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+
+  --font-size-sm: 0.8125rem;
+  
 }
 
 .dark {
@@ -76,7 +90,7 @@
   --destructive-foreground: oklch(0.95 0.02 80.72);
 
   --border: oklch(0.22 0.02 74.64);
-  --input: oklch(0.22 0.02 74.64);
+  --input: #757575;
   --ring: oklch(0.58 0.15 144.17);
 
   --chart-1: oklch(0.72 0.16 144.21);
@@ -139,7 +153,11 @@
   --font-sans: var(--font-sans);
   --font-serif: var(--font-serif);
   --font-mono: var(--font-mono);
+  --font-system: var(--font-system);
 
+  --font-size-sm: 0.8125rem;
+
+  
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -163,4 +181,33 @@
   ::file-selector-button {
     border-color: var(--color-border, currentColor);
   }
+  
+  body {
+    font-family: var(--font-system);
+    font-size: 13px;
+  }
+}
+
+@layer utilities {
+  .text-sm {
+    font-size: 0.8125rem;
+  }
+  
+  .rounded-md {
+    border-radius: calc(var(--radius) - 4px);
+  }
+
+  .focus-visible\:border-ring {
+    &:focus-visible {
+      border-color: var(--accent-dark);
+      border-width: 2px;
+    }
+  }
+  .bg-accent-dark {
+    background-color: var(--accent-dark2);
+  }
+  .fill-accent-dark {
+    fill: var(--accent-dark2);
+  }
+ 
 }
