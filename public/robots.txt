@@ -25,12 +25,5 @@ Allow: /registry
 Allow: /demo
 Allow: /tokens
 
-# Disallow access to private or admin areas (if any)
-# Disallow: /admin/
-# Disallow: /private/
-
-# Crawl delay (optional - helps prevent overloading your server)
-# Crawl-delay: 1
-
 # Sitemap (uncomment and update with your actual domain)
-# Sitemap: https://your-domain.vercel.app/sitemap.xml
+# Sitemap: https://slds2-shadcn-registry.vercel.app/sitemap.xml
