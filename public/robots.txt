@@ -22,4 +22,4 @@ Allow: /demo
 Allow: /tokens
 
 # Sitemap (if you have one)
-# Sitemap: https://your-domain.com/sitemap.xml
+# Sitemap: https://slds-shadcn-registry.vercel.app/sitemap.xml
