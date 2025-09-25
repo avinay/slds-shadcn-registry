@@ -15,11 +15,22 @@ Allow: /*.gif
 Allow: /*.ico
 Allow: /*.css
 Allow: /*.js
+Allow: /*.woff
+Allow: /*.woff2
+Allow: /*.ttf
+Allow: /*.eot
 
 # Allow access to all public routes
 Allow: /registry
 Allow: /demo
 Allow: /tokens
 
-# Sitemap (if you have one)
-# Sitemap: https://slds-shadcn-registry.vercel.app/sitemap.xml
+# Disallow access to private or admin areas (if any)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Crawl delay (optional - helps prevent overloading your server)
+# Crawl-delay: 1
+
+# Sitemap (uncomment and update with your actual domain)
+# Sitemap: https://your-domain.vercel.app/sitemap.xml
