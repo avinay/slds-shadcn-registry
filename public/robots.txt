@@ -1,0 +1,25 @@
+User-agent: *
+Allow: /
+
+# Allow access to all public files including registry endpoints
+Allow: /r/
+Allow: /r/registry.json
+Allow: /r/*.json
+
+# Allow access to all static assets
+Allow: /*.svg
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.gif
+Allow: /*.ico
+Allow: /*.css
+Allow: /*.js
+
+# Allow access to all public routes
+Allow: /registry
+Allow: /demo
+Allow: /tokens
+
+# Sitemap (if you have one)
+# Sitemap: https://your-domain.com/sitemap.xml
