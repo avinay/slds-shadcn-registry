@@ -27,3 +27,5 @@ Allow: /tokens
 
 # Sitemap (uncomment and update with your actual domain)
 # Sitemap: https://slds2-shadcn-registry.vercel.app/sitemap.xml
+
+# Updated: 2024-12-19
